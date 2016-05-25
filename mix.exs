@@ -44,4 +44,18 @@ defmodule TracingHelper.Mixfile do
       }
     ]
   end
+
+  defp package do
+    [
+     name: :tracing_helper,
+     description: "simple tracing helper",
+     files: ["lib","mix.exs", "README.md"],
+     maintainers: ["Andrzej Śliwa"],
+     licenses: ["MIT"],
+     links: %{
+        "GitHub" => "https://github.com/andrzejsliwa/tracing_helper",
+        "Docs" => "http://hexdocs.pm/tracing_helper/"
+      }
+    ]
+  end
 end
