@@ -34,6 +34,7 @@ defmodule TracingHelper.Mixfile do
 
   defp package do
     [
+      description: "simple tracing helper"
       files: ["lib", "mix.exs", "README.md"],
       maintainers: ["Andrzej Śliwa"],
       licenses: ["MIT"],
