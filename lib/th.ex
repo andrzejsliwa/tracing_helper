@@ -152,7 +152,7 @@ defmodule TH do
 
   defp nested_trace({:trace, pid, :call, {mod, fun, args}}, level) do
     module =
-      module
+      mod
       |> Atom.to_string
       |> elixir_module
     function = Atom.to_string(fun)
@@ -175,12 +175,12 @@ defmodule TH do
     level
   end
 
-  defp flat_trace({:trace, pid, :call, {module, function, args}}, level) do
+  defp flat_trace({:trace, pid, :call, {mod, fun, args}}, level) do
     module =
-      module
+      mod
       |> Atom.to_string
       |> elixir_module
-    function = Atom.to_string(function)
+    function = Atom.to_string(fun)
     args     = format_args(args)
     IO.puts "#{inspect(pid)} call: #{module}.#{function}(#{args}) level: #{level}"
     level + 1
