@@ -28,9 +28,9 @@ defmodule TH do
   """
   import :erlang, only: [group_leader: 0]
 
-  @spec trace_flat(module()) :: {:ok, pid()}
+  @spec trace_flat(module()) :: {:ok, pid()} | {:error, term()}
   def trace_flat(mod) when is_atom(mod) do
-    result = {:ok, _pid} = flat_tracer()
+    result = flat_tracer()
     {:ok, _} = setup_tracing(mod)
     result
   end
@@ -53,9 +53,9 @@ defmodule TH do
       #PID<0.125.0> rtrn: 1.0 level: 0
       1.0
   """
-  @spec trace_flat(module(), atom()) :: {:ok, pid()}
+  @spec trace_flat(module(), atom()) :: {:ok, pid()} | {:error, term()}
   def trace_flat(mod, fun) when is_atom(mod) and is_atom(fun) do
-    result = {:ok, _pid} = flat_tracer()
+    result = flat_tracer()
     {:ok, _} = setup_tracing(mod, fun)
     result
   end
@@ -81,9 +81,9 @@ defmodule TH do
       #PID<0.138.0> 1.0
       1.0
   """
-  @spec trace_nested(module()) :: {:ok, pid()}
+  @spec trace_nested(module()) :: {:ok, pid()} | {:error, term()}
   def trace_nested(mod) when is_atom(mod) do
-    result = {:ok, _pid} = nested_tracer()
+    result = nested_tracer()
     {:ok, _} = setup_tracing(mod)
     result
   end
@@ -105,9 +105,9 @@ defmodule TH do
       #PID<0.138.0> 1.0
       1.0
   """
-  @spec trace_nested(module(), atom()) :: {:ok, pid()}
+  @spec trace_nested(module(), atom()) :: {:ok, pid()} | {:error, term()}
   def trace_nested(mod, fun) when is_atom(mod) and is_atom(fun) do
-    result = {:ok, _pid} = nested_tracer()
+    result = nested_tracer()
     {:ok, _} = setup_tracing(mod, fun)
     result
   end

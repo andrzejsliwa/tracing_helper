@@ -3,7 +3,7 @@ defmodule TracingHelper.Mixfile do
 
   def project do
     [app: :tracing_helper,
-     version: "0.0.2",
+     version: "0.0.3",
      elixir: "~> 1.2",
      description: "simple tracing helper",
      description: description,
