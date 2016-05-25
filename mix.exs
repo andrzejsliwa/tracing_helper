@@ -5,7 +5,7 @@ defmodule TracingHelper.Mixfile do
     [app: :tracing_helper,
      version: "0.0.1",
      elixir: "~> 1.2",
-     description: "simple tracing helper",
+    description: "simple tracing helper",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -49,7 +49,7 @@ defmodule TracingHelper.Mixfile do
   defp package do
     [
      name: :tracing_helper,
-     files: ["lib","mix.exs", "README.md"],
+     files: ["lib","mix.exs", "README.md", "LICENSE"],
      maintainers: ["Andrzej Śliwa"],
      licenses: ["MIT"],
      links: %{
