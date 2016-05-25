@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.5">
-    <title>TH – tracing_helper v0.0.2</title>
+    <title>TH – tracing_helper v0.0.3</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
       <link rel="canonical" href="https://hexdocs.pm/tracing_helper/TH.html" />
@@ -30,7 +30,7 @@
         tracing_helper
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.3
       </h2>
     </div>
     
@@ -62,7 +62,7 @@
 
 
       <h1>
-        <small class="visible-xs">tracing_helper v0.0.2</small>
+        <small class="visible-xs">tracing_helper v0.0.3</small>
         TH
         
         
@@ -178,7 +178,7 @@
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">trace_flat(module) :: {:ok, pid}</code></pre>
+          <pre><code class="elixir">trace_flat(module) :: {:ok, pid} | {:error, term}</code></pre>
         
       </div>
     </div>
@@ -216,7 +216,9 @@ iex(2)&gt; Float.floor 1.1
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">trace_flat(module, atom) :: {:ok, pid}</code></pre>
+          <pre><code class="elixir">trace_flat(module, atom) ::
+  {:ok, pid} |
+  {:error, term}</code></pre>
         
       </div>
     </div>
@@ -250,7 +252,7 @@ iex(2)&gt; Float.floor 1.1
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">trace_nested(module) :: {:ok, pid}</code></pre>
+          <pre><code class="elixir">trace_nested(module) :: {:ok, pid} | {:error, term}</code></pre>
         
       </div>
     </div>
@@ -288,7 +290,9 @@ iex(2)&gt; Float.floor 1.1
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">trace_nested(module, atom) :: {:ok, pid}</code></pre>
+          <pre><code class="elixir">trace_nested(module, atom) ::
+  {:ok, pid} |
+  {:error, term}</code></pre>
         
       </div>
     </div>
