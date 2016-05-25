@@ -5,7 +5,9 @@ defmodule TracingHelper.Mixfile do
     [app: :tracing_helper,
      version: "0.0.1",
      elixir: "~> 1.2",
-    description: "simple tracing helper",
+     description: "simple tracing helper",
+     description: description,
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -33,17 +35,10 @@ defmodule TracingHelper.Mixfile do
      {:dialyxir, "~> 0.3", only: [:dev]}]
   end
 
-  defp package do
-    [
-      description: "simple tracing helper",
-      files: ["lib", "mix.exs", "README.md"],
-      maintainers: ["Andrzej Śliwa"],
-      licenses: ["MIT"],
-      links: %{
-        "GitHub" => "https://github.com/andrzejsliwa/tracing_helper",
-        "Docs" => "http://hexdocs.pm/tracing_helper/"
-      }
-    ]
+  defp description do
+    """
+    TracingHelper is a helper module with predefined tracing functions
+    """
   end
 
   defp package do
