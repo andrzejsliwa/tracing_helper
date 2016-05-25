@@ -1,6 +1,6 @@
 defmodule TH do
   @moduledoc ~S"""
-  Basic tracing helpe
+  Basic tracing helper
   """
 
   @tracing_options [{:_, [], [{:return_trace}, {:exception_trace}]}]
