@@ -32,7 +32,8 @@ defmodule TracingHelper.Mixfile do
   defp deps do
     [{:mix_test_watch, "~> 0.2", only: :dev},
      {:credo, "~> 0.3", only: [:dev, :test]},
-     {:dialyxir, "~> 0.3", only: [:dev]}]
+     {:dialyxir, "~> 0.3", only: [:dev]},
+     {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp description do
