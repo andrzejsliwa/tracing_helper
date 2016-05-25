@@ -31,4 +31,16 @@ defmodule TracingHelper.Mixfile do
      {:credo, "~> 0.3", only: [:dev, :test]},
      {:dialyxir, "~> 0.3", only: [:dev]}]
   end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Andrzej Śliwa"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/andrzejsliwa/tracing_helper",
+        "Docs" => "http://hexdocs.pm/tracing_helper/"
+      }
+    ]
+  end
 end
